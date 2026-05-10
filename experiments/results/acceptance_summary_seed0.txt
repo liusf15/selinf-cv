@@ -1,0 +1,18 @@
+Acceptance Rates: ESS vs Rejection Sampling
+============================================================
+
+Seed: 0
+
+Elliptical Slice Sampling (ESS)
+------------------------------------------------------------
+Mean acceptance rate: 0.986000
+Std acceptance rate:  0.087073
+Min acceptance rate:  0.166667
+Max acceptance rate:  1.000000
+Number of samples:   500
+
+Rejection Sampling
+------------------------------------------------------------
+Acceptance rate:     0.110840
+Samples accepted:    500
+Total attempts:      4511
