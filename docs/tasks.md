@@ -21,3 +21,12 @@
 - [x] Implement rejection sampling as described in `docs/problem.md`
 - [x] Run ESS to sample this distribution as described in `docs/problem.md`
 - [x] Compare the samples obtained by rejection sampling and ESS: the samples should have the same distribution.
+
+## Step 5: Incorporating lasso selection probability
+
+- [ ] Compute $P^{lasso}$ using the separation-of-variable method. 
+- [ ] Obtained the final selective density
+```math
+p_{\beta_0}(\hat\beta_M\mid \lambda,M,A) \propto p_{\beta_0}(\hat\beta_M;\hat\lambda=\lambda,A) \cdot P^{lasso}(\hat M^{\lambda}=M\mid \hat\beta_M,A).
+```
+
