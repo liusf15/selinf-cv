@@ -15,13 +15,7 @@ pip install -r requirements.txt
 Run the main experiment:
 
 ```bash
-python experiments/run_lassocv.py --seed 0
-```
-
-Run tests:
-
-```bash
-python -m pytest tests/ -v
+python -m experiments.run_lassocv --progress --plot
 ```
 
 ## Repository Structure
@@ -39,8 +33,7 @@ experiments/
 
 tests/
 ├── test_ess.py          # Tests for elliptical slice sampler
-├── test_antithetic_cv.py# Tests for antithetic CV components
-└── test_comparison.py   # Comparison tests between methods
+└── test_antithetic_cv.py# Tests for antithetic CV components
 
 docs/                    # Problem formulation and algorithm details
 ```
