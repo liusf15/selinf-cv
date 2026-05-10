@@ -14,7 +14,7 @@ T^{\text{train},k}= T + \alpha \omega^k,\quad T^{\text{test}, k} = T-\frac{1}{\s
 ```
 
 It's easy to see that
-- $T^{\text{train},k}$ is independent of $T^{\text{test}, k} $ marginally.
+- $T^{\text{train},k}$ is independent of $T^{\text{test}, k}$ marginally.
 - Averaging $T^{\text{train},k}$ (or $T^{\text{test}, k}$) over $k$ recoverse the original data $T$.
 
 Then we can use these train-test pairs to do cross-validation: fit the predictor/estimator on training data, and evaluate on the test data, and average the test errors over the $K$ pairs.
