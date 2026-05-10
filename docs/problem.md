@@ -2,7 +2,7 @@
 
 ## Motivating example: Lasso with cross-validated $\lambda$
 
-We use CV to select a regularization parameter $\lambda$, and then run lasso to select a variable set $M$. We want to do inference for the selected variables $\beta_j,j\in M$. We do inference bsaed on the distribution of $\hat\beta_M=(X_M^\top X_M)^{-1} X_M^\top y$ conditional on the selection event $\{\hat\lambda=\lambda, \hat M^{\lambda} = M \}$. Here, $\hat\lambda$ denote the output of CV, and $\hat M^{\lambda}$ denote the output of lasso (signed) variable selection with fixed $\lambda$. Additionally, we need to condition on $A=X_{-M}^\top (I_n- X_M (X_M^\top X_M)^{-1} X_M^\top) y $ to get rid of nuisance parameters.
+We use CV to select a regularization parameter $\lambda$, and then run lasso to select a variable set $M$. We want to do inference for the selected variables $\beta_j,j\in M$. We do inference bsaed on the distribution of $\hat\beta_M=(X_M^\top X_M)^{-1} X_M^\top y$ conditional on the selection event $\{\hat\lambda=\lambda, \hat M^{\lambda} = M \}$. Here, $\hat\lambda$ denote the output of CV, and $\hat M^{\lambda}$ denote the output of lasso (signed) variable selection with fixed $\lambda$. Additionally, we need to condition on $A=X_{-M}^\top (I_n- X_M (X_M^\top X_M)^{-1} X_M^\top)y$ to get rid of nuisance parameters.
 
 Under $\beta_0$, the conditional density of $\hat\beta_M$ is proportional to
 ```math
@@ -10,8 +10,8 @@ p_{\beta_0}(\hat\beta_M\mid \lambda,M,A) \propto \varphi(\hat\beta_M;\beta_0,\Si
 ```
 
 - $\varphi(\hat\beta_M;\beta_0,\Sigma_M)$ is the density of $N(\beta_0,\Sigma_M=\sigma^2(X_M^\top X_M)^{-1} )$
-- P^{cv} is the probability of selecting $\lambda$ using CV
-- P^{lasso} is the lasso selection probability.
+- $P^{cv}$ is the probability of selecting $\lambda$ using CV
+- $P^{lasso}$ is the lasso selection probability.
 
 There are efficient ways to compute $P^{lasso}$, since lasso selection event is a polyhedron.
 
